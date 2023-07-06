@@ -4,6 +4,8 @@
 # Set WAMR's build options
 if("${IDF_TARGET}" STREQUAL "esp32c3")
     set(WAMR_BUILD_TARGET "RISCV32")
+elseif("${IDF_TARGET}" STREQUAL "esp32c6")
+    set(WAMR_BUILD_TARGET "RISCV32")
 else()
     set(WAMR_BUILD_TARGET "XTENSA")
 endif()
