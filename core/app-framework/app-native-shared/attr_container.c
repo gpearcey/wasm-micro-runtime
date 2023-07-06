@@ -919,7 +919,7 @@ attr_container_dump(const attr_container_t *attr_cont)
                 break;
             case ATTR_TYPE_INT: /* = ATTR_TYPE_INT32 */
                 bh_memcpy_s(&value.i32, sizeof(int32_t), p, sizeof(int32_t));
-                attr_container_printf(", type: int, value: 0x%x\n", value.i32);
+                attr_container_printf(", type: int, value: 0x%lx\n", value.i32);
                 p += 4;
                 break;
             case ATTR_TYPE_INT64:
@@ -935,7 +935,7 @@ attr_container_dump(const attr_container_t *attr_cont)
                 break;
             case ATTR_TYPE_UINT16:
                 bh_memcpy_s(&value.u16, sizeof(uint16_t), p, sizeof(uint16_t));
-                attr_container_printf(", type: uint16, value: 0x%x\n",
+                attr_container_printf(", type: uint16, value: 0x%lx\n",
                                       value.u16);
                 p += 2;
                 break;
@@ -972,7 +972,7 @@ attr_container_dump(const attr_container_t *attr_cont)
                 p += sizeof(uint16_t) + get_uint16(p);
                 break;
             case ATTR_TYPE_BYTEARRAY:
-                attr_container_printf(", type: byte array, length: %d\n",
+                attr_container_printf(", type: byte array, length: %ld\n",
                                       get_uint32(p));
                 p += sizeof(uint32_t) + get_uint32(p);
                 break;
