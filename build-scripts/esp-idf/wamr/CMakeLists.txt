@@ -51,8 +51,8 @@ if (NOT CMAKE_BUILD_EARLY_EXPANSION)
     include(${WAMR_ROOT_DIR}/build-scripts/runtime_lib.cmake)
 endif()
 
-idf_component_register(SRCS ${WAMR_RUNTIME_LIB_SOURCE} ${PLATFORM_SHARED_SOURCE}
-  INCLUDE_DIRS ${IWASM_DIR}/include ${UTILS_SHARED_DIR} ${PLATFORM_SHARED_DIR} ${PLATFORM_SHARED_DIR}/../include
+idf_component_register(SRCS ${WAMR_RUNTIME_LIB_SOURCE} ${PLATFORM_SHARED_SOURCE} ${WAMR_ROOT_DIR}/core/app-framework/app-native-shared/attr_container.c
+  INCLUDE_DIRS ${IWASM_DIR}/include ${UTILS_SHARED_DIR} ${PLATFORM_SHARED_DIR} ${PLATFORM_SHARED_DIR}/../include ${WAMR_ROOT_DIR}/core/app-framework/app-native-shared/
   REQUIRES pthread lwip esp_timer
 )
 
