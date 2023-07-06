@@ -2,6 +2,16 @@
 
 This is a fork of the [WebAssembly Micro Runtime](https://github.com/bytecodealliance/wasm-micro-runtime) repository. I made this fork to support usage with the ESP32-C6 with ESP-IDF version 5.1.
 
+These are the changes I made to get it to work with esp-idf:
+
+* Added esp32c6 and RISCV32 as target options ( commit # 7cc7d83c64811b35a8faab9d9121437a2d4e979c)
+* Changed the format of some of the values being printed. I added an "l" in front of the numbers giving me an error. ( commit # 80f4637a86ecd5904021bf3958cad0a6e838fb97)
+* Added a file to the component register directly because esp-idf couldn't find it for some reason, and moved the following files up one directory from {WAMR-DIR}/core/shared/utils/uncommon to {WAMR-DIR}/core/shared/utils/ (commit # e25b331351b6c09f65a966b01fb5e17187bf0c42)
+  `bh_getopt.c` , `bh_getopt.h`, `bh_read_file.c`, and `bh_read_file.h`
+
+
+
+
 **A [Bytecode Alliance][BA] project**
 
 [BA]: https://bytecodealliance.org/
