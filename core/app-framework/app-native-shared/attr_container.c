@@ -935,13 +935,13 @@ attr_container_dump(const attr_container_t *attr_cont)
                 break;
             case ATTR_TYPE_UINT16:
                 bh_memcpy_s(&value.u16, sizeof(uint16_t), p, sizeof(uint16_t));
-                attr_container_printf(", type: uint16, value: 0x%lx\n",
+                attr_container_printf(", type: uint16, value: 0x%x\n",
                                       value.u16);
                 p += 2;
                 break;
             case ATTR_TYPE_UINT32:
                 bh_memcpy_s(&value.u32, sizeof(uint32_t), p, sizeof(uint32_t));
-                attr_container_printf(", type: uint32, value: 0x%x\n",
+                attr_container_printf(", type: uint32, value: 0x%lx\n",
                                       value.u32);
                 p += 4;
                 break;
