@@ -1,6 +1,6 @@
 # WebAssembly Micro Runtime
 
-This is a fork of the [WebAssembly Micro Runtime](https://github.com/bytecodealliance/wasm-micro-runtime) repository. I made this fork to support usage with the ESP32-C6 with ESP-IDF version 5.1.
+This is a fork of the [WebAssembly Micro Runtime](https://github.com/bytecodealliance/wasm-micro-runtime) repository. I made this fork to support usage with the ESP32-C6 with ESP-IDF version 5.1 for the [CyberBoat](https://cyberboat.gitbook.io/cyberboat/) project. 
 
 These are the changes I made to get it to work with esp-idf:
 
